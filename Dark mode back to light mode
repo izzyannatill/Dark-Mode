@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍰My Love for Baking🍰</title>
+    <style>
+      body {
+        background: rgba(240, 194, 213, 0.4);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        padding: 15px 10px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        padding: 5px;
+        margin: 0 10px 10px 10px;
+      }
+      img {
+        max-width: 100%;
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
+      }
+      p {
+        padding: 10px 20px;
+        margin: 10px 20px;
+      }
+      button {
+        border-radius: 10px;
+        border-color: 2px solid rgb(244, 119, 169);
+        background-color: transparent;
+        font-size: 20px;
+        padding: 8px 13px;
+        transition: all 250ms ease-in-out;
+        display: block;
+        margin: 0 auto;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      button:hover {
+        background: plum;
+        cursor: pointer;
+      }
+      .dark {
+        background: black;
+      }
+      .dark .container {
+        background: #5e5f64;
+      }
+      .dark h1 {
+        color: white;
+      }
+      .dark h2 {
+        color: white;
+      }
+      .dark p {
+        color: white;
+      }
+      .theme-button {
+        padding: 5px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px auto;
+        color: black;
+        background-color: white;
+        font-size: 20px;
+      }
+      .theme-button:hover {
+        color: white;
+        background-color: black;
+      }
+
+      .last {
+        background-color: #f7b9c6;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: black;
+      }
+      .container {
+        max-width: 900px;
+        background-color: rgba(249, 144, 186, 0.4);
+        border-radius: 10px;
+        margin: 0 auto;
+      }
+      .baking-one {
+        display: block;
+        margin: 20px auto;
+        border-radius: 20px;
+        width: 350px;
+        height: 250px;
+        transition: filter 150ms ease-in-out, transform 200ms ease-in;
+      }
+
+      .baking-one:hover {
+        filter: contrast(40%);
+        transform: scale(1.2);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        grid-gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grid img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>Baking</h1>
+      <h2>A Guide to Baking!</h2>
+      <a href="https://en.wikipedia.org/wiki/Baking">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/837/original/macarons.jpeg?1709753606"
+          class="baking-one"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/840/original/whisk.jpeg?1709753620"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/836/original/Cookies.jpeg?1709753597"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/835/original/cake.jpeg?1709753589"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/834/original/bread.jpeg?1709753582"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/833/original/Baking_q.jpeg?1709753576"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/117/832/original/foccacia.jpeg?1709753569"
+        />
+      </div>
+      <p>
+        It’s incredibly satisfying, taking ingredients that don’t amount to much
+        on their own and combining them in such a way that you can create
+        something extraordinary. And sharing your passion is possibly the best
+        part—making another person happy by giving them a homemade goodie is a
+        delightful feeling.
+      </p>
+      <p>
+        As an adult (and a huge fan of The Great British Bakeoff), I’ve
+        discovered the pleasure of baking bread and pies. I no longer crave only
+        chocolate but love to create fruit desserts and seek out unique
+        flavours.
+      </p>
+      <a href="https://www.bbcgoodfood.com/recipes/collection/baking-recipes">
+        <button class="last">Find recipes for amazing cakes!</button>
+      </a>
+    </div>
+    <footer>Coded by Izzy Till</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
